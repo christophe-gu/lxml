@@ -478,7 +478,7 @@ class HtmlMixin(object):
             raise ValueError(
                 "unexpected value for handle_failures: %r" % handle_failures)
 
-        self.rewrite_links(link_repl)
+        self.rewrite_links(link_repl, resolve_base_href=resolve_base_href)
 
     def resolve_base_href(self, handle_failures=None):
         """
